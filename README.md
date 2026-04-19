@@ -12,7 +12,7 @@ Dự án này là minh chứng cụ thể cho khả năng của thuật toán Na
 - **Data Augmentation**: Mô hình sở hữu tập dữ liệu tự sinh bằng ngôn ngữ tự nhiên lớn (Lên tới 20.000 records).
 - **Trải Nghiệm Responsive**: Tương thích tốt giao diện trên Desktop và có độ mượt mà trên chuẩn Web-Mobile.
 
-![UI Screenshot](docs/images/test_diagnosis_ui.png)
+![UI Screenshot](docs/images/test_1.png)
 *(Giao diện UI Trợ lý Phân loại Y tế)*
 
 ## Kết quả Huấn Luyện AI
