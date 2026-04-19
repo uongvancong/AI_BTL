@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Trợ Lý Điệm Bệnh Thông Minh">
+    <title>Hệ thống hỗ trợ chẩn đoán y tế</title>
+    <!-- Healthcare Design System Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=Noto+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="app-wrapper">
+        <div class="app-container">
+            <!-- Header -->
+            <header class="chat-header">
+                <div class="header-content">
+                    <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path fill-rule="evenodd" d="M11.99 2.5a.75.75 0 01.73.61l.53 3.32a6.76 6.76 0 012.33 1.34l3.18-.99a.75.75 0 01.89.46l2.12 5.09a.75.75 0 01-.22.84l-2.52 2.07c.05.41.08.82.08 1.25s-.03.84-.08 1.25l2.52 2.07a.75.75 0 01.22.84l-2.12 5.09a.75.75 0 01-.89.46l-3.18-.99a6.76 6.76 0 01-2.33 1.34l-.53 3.32a.75.75 0 01-.73.61h-2.98a.75.75 0 01-.73-.61l-.53-3.32a6.76 6.76 0 01-2.33-1.34l-3.18.99a.75.75 0 01-.89-.46l-2.12-5.09a.75.75 0 01.22-.84L4.31 13.5A6.87 6.87 0 014.23 12c0-.43.03-.84.08-1.25l-2.52-2.07a.75.75 0 01-.22-.84l2.12-5.09a.75.75 0 01.89-.46l3.18.99a6.76 6.76 0 012.33-1.34l.53-3.32a.75.75 0 01.73-.61h2.98zm-2.05 10A3.06 3.06 0 1013.99 12a3.06 3.06 0 00-4.05.5z" clip-rule="evenodd" />
+                        <path d="M12 9a3 3 0 100 6 3 3 0 000-6z" />
+                    </svg>
+                    <div>
+                        <h1>Hệ thống hỗ trợ y tế</h1>
+                        <p class="subtitle">Đồ án môn Trí tuệ nhân tạo</p>
+                    </div>
+                </div>
+                <button class="icon-btn" id="btnClearChat" aria-label="Khởi tạo lại">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+                    </svg>
+                </button>
+            </header>
+
+            <!-- Warnings/Ethics Note -->
+            <div class="medical-disclosure">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a.75.75 0 000 1.5h.253a.25.25 0 01.244.304l-.459 2.066A1.75 1.75 0 0010.747 15H11a.75.75 0 000-1.5h-.253a.25.25 0 01-.244-.304l.459-2.066A1.75 1.75 0 009.253 9H9z" clip-rule="evenodd" />
+                </svg>
+                <span>Hệ thống chỉ mang tính tham khảo. Không thay thế chỉ định của Bác sĩ chuyên môn.</span>
+            </div>
+
+            <!-- Chat Messages Area -->
+            <main class="chat-messages" id="chatMessages">
+                <!-- Welcome Message -->
+                <div class="message bot-message fade-in">
+                    <div class="avatar bot-avatar">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path fill-rule="evenodd" d="M11.47 2.47a.75.75 0 011.06 0l4.5 4.5a.75.75 0 01-1.06 1.06l-3.22-3.22V16.5a.75.75 0 01-1.5 0V4.81L8.03 8.03a.75.75 0 01-1.06-1.06l4.5-4.5zM3 15.75a.75.75 0 01.75.75v2.25a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5V16.5a.75.75 0 011.5 0v2.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V16.5a.75.75 0 01.75-.75z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="message-content">
+                        Xin chào, đây là hệ thống hỗ trợ dự đoán bệnh dựa trên thuật toán Naive Bayes. Bạn có thể nhập triệu chứng đang gặp phải (Ví dụ: đau đầu, buồn nôn, khó thở) để hệ thống đưa ra phán đoán.
+                    </div>
+                </div>
+            </main>
+
+            <!-- Input Area -->
+            <footer class="chat-input-area">
+                <input
+                    type="text"
+                    id="messageInput"
+                    placeholder="Mô tả triệu chứng của bạn..."
+                    autocomplete="off"
+                    aria-label="Khung nhập triệu chứng"
+                >
+                <button class="btn-send" id="btnSend" aria-label="Gửi triệu chứng">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M3.478 2.404a.75.75 0 00-.926.941l2.432 7.905H13.5a.75.75 0 010 1.5H4.984l-2.432 7.905a.75.75 0 00.926.94 60.519 60.519 0 0018.445-8.986.75.75 0 000-1.218A60.517 60.517 0 003.478 2.404z" />
+                    </svg>
+                </button>
+            </footer>
+        </div>
+    </div>
+    
+    <script src="/static/js/chat.js"></script>
+</body>
+</html>

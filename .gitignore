@@ -1,0 +1,21 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# LaTeX build files
+*.aux
+*.lof
+*.log
+*.lot
+*.out
+*.toc
+
+# AI-generated agents context (optional to ignore)
+.agent/
